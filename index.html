@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="CSS/main.css" />
+</head>
+
+<body>
+
+    <main>
+
+        <header class="mid">
+
+<!--            <img id="back-button" data-src="IMG/caret.svg" class="iconic" data-direction="left" alt="Back Button" title="Back" />-->
+
+            <img id="search-button" class="iconic" data-src="IMG/magnifying-glass.svg" alt="Search" title="Search" />
+
+            <input type="text" id="search-input" placeholder="SEARCH" />
+
+        </header>
+
+        <div class="page active" id="search-results">
+
+            <section class="title">Search a movie</section>
+
+           <section class="content">
+
+                <div class='movie1'>
+<!--                    <img class="poster" src="" alt="movie poster">-->
+
+                    <h2 class="title"> Welcome To The Movie App </h2>
+
+                    <p class="desc"> </p>
+                </div>
+
+            </section>
+
+            <div class="attribution">
+                <!--                <img src="IMG/293x302-powered-by-square-green.png" alt="The Movie DB" />--><img src="IMG/208x226-stacked-blue.png" alt="The Movie DB" />
+            </div>
+        </div>
+
+        <div class="page" id="recommend-results">
+            <section class="title">Recommended</section>
+
+
+            <section class="content">
+
+                <div class='movie1'>
+                    <img class="poster" alt="movie poster">
+
+                    <h2 class="title"> Welcome </h2>
+
+                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias odio rerum, earum recusandae dolorem dolore consectetur, molestiae modi aliquid sequi amet ducimus, dolores illo mollitia deserunt nisi. Ducimus, quos aliquid. </p>
+                </div>
+
+            </section>
+
+            <div class="attribution">
+                <img src="IMG/208x226-stacked-blue.png" alt="The Movie DB" />
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="loading not">
+        <img class="iconic" data-src='IMG/loop-circular-lg.svg' title="loop circular" />
+    </div>
+
+
+
+    <script src="./iconic/js/iconic.min.js"></script>
+    <script src="./JS/key.js"></script>
+    <script src="./JS/main.js"></script>
+
+</body>
+
+</html>

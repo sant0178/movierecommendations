@@ -1,0 +1,159 @@
+/*********************************
+            DEFAULTS
+**********************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+html{
+    
+}
+h1{
+    
+}
+h2{
+    font-family: sans-serif;
+}
+p{
+    font-family: sans-serif;
+}
+.attribution{
+    width: 30%;
+    text-align: center;
+}
+/*********************************
+            NAVIGATION
+**********************************/
+.page{
+    display: none;
+    margin-top: 1rem;
+}
+.page.active{
+    display: block;
+    margin-top: 1rem;
+}
+.mid{
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1.5rem;
+}
+.not{
+    display: none;
+}
+#back-button{
+    width: 2rem;
+    height: 2rem;
+} 
+
+
+
+
+
+/*********************************
+            SEARCH RESULTS
+**********************************/
+.movie{
+    max-width: 800px;
+    padding: 1rem;
+    clear: both;
+    border-spacing: 1rem;
+    border-width: 80%;
+    border: 1px solid grey;
+    background-color:azure;
+}
+.poster{
+    float: left;
+    margin:0 1rem 1rem 0;
+}
+.title{
+    font-size: 2rem;
+    color:#333;
+    margin: 1rem;
+    padding-top: 1rem;
+}
+
+.desc{
+    font-size: 1rem;
+    color: #999;
+    
+}
+
+
+
+
+
+
+/*********************************
+            RECOMMENDATION
+**********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************
+            SEARCH BAR
+**********************************/
+
+#search-results{
+    position: absolute;
+    height: 1.5rem;
+    right: 15.rem;
+    left: 0;
+    top: 0;
+    z-index: 120;
+}
+.movie1{
+    
+    border-width: 3rem;
+    margin: 0 auto;
+    border-style: none;
+    background-color: antiquewhite;
+    
+}
+#search-button{
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    top:0;
+    right: 0;
+    z-index: 200;
+    padding: .5rem;
+    background-color: #eee;
+    cursor: pointer;
+}
+#search{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    height: 3rem;
+}
+#search-input{
+    width:100%;
+    position: fixed;
+    margin-bottom: 5rem;
+    z-index: 100;
+    padding:.7rem;
+}
+#back-button{
+    position: absolute;
+    height: 1.5rem;
+    top: 0;
+    z-index: 200;
+    padding: .5rem;
+    cursor: pointer;
+
+}
