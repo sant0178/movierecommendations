@@ -17,7 +17,7 @@
 
 
 let app = {
-    URL: 'http://api.themoviedb.org/3/',
+    URL: 'https://api.themoviedb.org/3/',
     INPUT: null,
     BASEURL:'https://image.tmdb.org/t/p/w185',
     init: function(){
