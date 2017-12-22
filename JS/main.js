@@ -18,6 +18,7 @@
 
 let app = {
     URL: 'https://api.themoviedb.org/3/',
+    URL1: 'https://api.themoviedb.org/3/movie/',
     INPUT: null,
     BASEURL:'https://image.tmdb.org/t/p/w185',
     init: function(){
@@ -99,7 +100,7 @@ let app = {
             let div = document.createElement('div');
 //            div.setAttribute("data-movie", movie.id);
             
-            div.setAttribute('data-list', movie.id);
+            div.setAttribute('data-movie', movie.id);
             console.log(movie.id);
             div.addEventListener('click', app.getRecommended);
             div.classList.add('movie');
@@ -133,10 +134,58 @@ let app = {
     },
     getRecommended: function(ev){
         //part of the url here is the movie id <- included in movie obj
+        
+        ev.preventDefault();
+        
+        let movie_id = ev.currentTarget.getAttribute('data-movie');
+        let url = app.URL1+movie_id;
+        url += '/recommendations?api_key='+KEY;
+        
+        fetch(url)
+            .then( response => response.json() )
+            .then( data => {
+                console.log(data);
+                app.showMovies(data.results);
+            } )
+            .catch( err => {
+                console.log(err);
+            } );
+        },
+    
+    showRec: function(here){
+        
+         let section = document.querySelector('#recommend-results .content');
+        let df = document.createDocumentFragment();
+        section.innerHTML='';
+        
+        let rec =document.querySelector('')
+        
+        
         let movie_id = ev.target.getAttribute('data-movie');
         console.log("You clicked", movie_id); 
         
-    },
+        let div = document.createElement('div');
+        div.setAttribute('data-movie', movie_id);
+        div.classList.add('movie');
+        div.textContent=movie.overview;
+        
+         let img = document.createElement('img');
+        img.src=''.concat(app.BASEURL, movie.poster_path); 
+        
+        let title = document.createElement('h1');
+        title.textContent=movie.title;
+        
+        
+        
+        
+        
+        div.appendChild(img);
+        div.appendChild(title);
+        df.appendChild(div);
+        
+    }
+        
+   
 
     
 };
