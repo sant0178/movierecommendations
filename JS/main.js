@@ -113,8 +113,8 @@ let app = {
             title.textContent=movie.title;
             
             
-            
-            div.textContent=movie.overview;
+            let p =document.createElement('p');
+            p.textContent=movie.overview;
             
             
             
@@ -122,10 +122,11 @@ let app = {
           
             
             
-            
-            
+            div.appendChild(title);
             div.appendChild(img);
-            div.appendChild(title);    
+            div.appendChild(p)
+            
+                
             df.appendChild(div);
             
         });
@@ -164,10 +165,15 @@ let app = {
         let movie_id = ev.target.getAttribute('data-movie');
         console.log("You clicked", movie_id); 
         
+          let title = document.createElement('h1');
+        title.textContent=movie.title;
+        
         let div = document.createElement('div');
         div.setAttribute('data-movie', movie_id);
         div.classList.add('movie');
-        div.textContent=movie.overview;
+        
+        let p = document.createElement('p');
+        p.textContent=movie.overview;
         
          let img = document.createElement('img');
         img.src=''.concat(app.BASEURL, movie.poster_path); 
@@ -177,10 +183,9 @@ let app = {
         
         
         
-        
-        
-        div.appendChild(img);
         div.appendChild(title);
+        div.appendChild(img);
+        div.appendChild(p)
         df.appendChild(div);
         
     }
